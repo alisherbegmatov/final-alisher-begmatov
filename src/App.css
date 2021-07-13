@@ -1,0 +1,38 @@
+.App {
+  text-align: center;
+  font-family: "Futura";
+}
+
+html {
+  background-color: #000000;
+  font-family: "Futura";
+  color: #FFE81F;
+}
+
+button {
+  --bg-color: #000000;
+  --weight: bold;
+  font-size: 10px;
+  font-family: "Futura";
+  background-color: var(--bg-color);
+  font-weight: var(--weight);
+  color: var(--fg-color);
+  border-radius: 8px;
+  padding: 16px 16px;
+  border: 1px solid;
+  margin: 15px;
+}
+
+input[type="number"] {
+  --bg-color: #000000;
+  --weight: bold;
+  font-size: 10px;
+  font-family: "Futura";
+  background-color: var(--bg-color);
+  font-weight: var(--weight);
+  color: var(--fg-color);
+  border-radius: 8px;
+  padding: 16px 16px;
+  border: 1px solid;
+  margin: 15px;
+}

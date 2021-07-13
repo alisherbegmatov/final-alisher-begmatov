@@ -1,0 +1,9 @@
+.characterDisplay{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    border-radius: 15px;
+    justify-items: center;
+    font-family: "Futura";
+    color: #FFE81F;
+}
