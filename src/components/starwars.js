@@ -34,14 +34,16 @@ function Starwars () {
 
             const character = (
               <Character
-                name={data.name}
-                birthYear={data.birth_year}
-                gender={data.gender}
-                height={data.height}
-                mass={data.mass}
-                skinColor={data.skin_color}
-                hairColor={data.hair_color}
-                eyeColor={data.eye_color}
+                name={data[0].name}
+                birthYear={data[0].birth_year}
+                gender={data[0].gender}
+                height={data[0].height}
+                mass={data[0].mass}
+                skinColor={data[0].skin_color}
+                hairColor={data[0].hair_color}
+                eyeColor={data[0].eye_color}
+                homeworld={data[1].name}
+                films={data[2]}
               />
             )
 
@@ -57,14 +59,16 @@ function Starwars () {
       {data &&
         <div>
           <Character
-            name={data.name}
-            birthYear={data.birth_year}
-            gender={data.gender}
-            height={data.height}
-            mass={data.mass}
-            skinColor={data.skin_color}
-            hairColor={data.hair_color}
-            eyeColor={data.eye_color}
+            name={data[0].name}
+            birthYear={data[0].birth_year}
+            gender={data[0].gender}
+            height={data[0].height}
+            mass={data[0].mass}
+            skinColor={data[0].skin_color}
+            hairColor={data[0].hair_color}
+            eyeColor={data[0].eye_color}
+            homeworld={data[1].name}
+            films={data[2]}
           />
         </div>}
 

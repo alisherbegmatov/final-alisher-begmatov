@@ -23,7 +23,18 @@ export const loadCharacter = (number) => {
     try {
       const res = await fetch(url)
       const json = await res.json()
-      dispatch(characterSuccess(json))
+
+      const resTwo = await fetch(json.homeworld)
+      const jsonTwo = await resTwo.json()
+
+      // Get an array of Promises, these are the responses
+      const filmsRes = await Promise.all(json.films.map(film => fetch(film)))
+      // Resolve the responses to JSON
+      const filmsJSON = await Promise.all(filmsRes.map(res => res.json()))
+
+      const jsonArr = [json, jsonTwo, filmsJSON]
+
+      dispatch(characterSuccess(jsonArr))
     } catch (error) {
       dispatch(characterError(error))
     }
